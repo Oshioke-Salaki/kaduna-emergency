@@ -1,5 +1,5 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { riverLevels } from "../data/data";
+import { airQualityLevel } from "../data/data";
 import { useGeolocation } from "../hooks/useGeolocation";
 import { useEffect, useState } from "react";
 
@@ -28,9 +28,9 @@ function Map() {
   return (
     <div className="h-auto" style={{ flex: "1", position: "relative" }}>
       <div className="absolute left-[50%] top-[14px] z-[1000] flex w-fit translate-x-[-50%] shadow-shadowPri">
-        {riverLevels.map((level, i) => (
+        {airQualityLevel.map((level, i) => (
           <div
-            className="flex w-[140px] items-center justify-center px-6 py-1 text-center text-white"
+            className="flex w-fit items-center justify-center px-6 py-1 text-center text-white"
             style={{ backgroundColor: level.color }}
             key={i}
           >
