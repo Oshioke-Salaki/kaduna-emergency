@@ -61,6 +61,7 @@ function SideControl() {
           <ResponsiveContainer width={80} height={44}>
             {/* <AreaChart data={data} width={700} height={300}> */}
             <BarChart
+              barGap={1}
               data={[
                 {
                   name: "d",
@@ -123,7 +124,7 @@ function SideControl() {
                 stroke="#f6f6f6"
                 fill="#624af5"
                 barSize={5}
-                barGap={1}
+                // barGap={1}
                 // strokeWidth={2}
                 // unit="$"
                 name="Num"
