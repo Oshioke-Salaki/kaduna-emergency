@@ -4,7 +4,7 @@ function SideControl() {
       <h2 className="rounded-[10px_10px_0_0] bg-primaryColor py-[23px] text-center text-white">
         Reports
       </h2>
-      <div className="px-6 pt-5">
+      <div className="bg-[#F9F6F6] px-6 pt-5">
         <div className="mb-4 flex items-center gap-x-[10px]">
           <label
             htmlFor="cities"
