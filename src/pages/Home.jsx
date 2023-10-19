@@ -9,7 +9,9 @@ function Home() {
       <main className="mb-6 flex gap-x-[53px] bg-white px-8 py-[70px]">
         <SideControl />
       </main>
-      <Danger />
+      <div className="px-8">
+        <Danger />
+      </div>
     </div>
   );
 }
