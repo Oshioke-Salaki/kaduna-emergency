@@ -121,7 +121,7 @@ function SideControl() {
                 // stroke='#15803d'
                 // fill='#dcfce7'
                 stroke="#624af5"
-                fill="#624af5"
+                fill="#f6f6f6"
                 // strokeWidth={2}
                 // unit="$"
                 name="Num"
