@@ -104,7 +104,7 @@ function SideControl() {
             tickLine={{ stroke: colors.text }}
           /> */}
               {/* <CartesianGrid strokeDasharray="4" /> */}
-              <Tooltip contentStyle={{ backgroundColor: "white" }} />
+              {/* <Tooltip contentStyle={{ backgroundColor: "white" }} /> */}
               {/* <Bar
             type="monotone"
             dataKey="totalSales"
@@ -123,7 +123,7 @@ function SideControl() {
                 // fill='#dcfce7'
                 stroke="#f6f6f6"
                 fill="#624af5"
-                barSize={5}
+                barSize={20}
                 // barGap={1}
                 // strokeWidth={2}
                 // unit="$"
