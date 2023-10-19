@@ -9,7 +9,10 @@ function Home() {
       <Navbar />
       <main className="mb-6 flex h-[512px] gap-x-[53px] bg-white px-8 py-[70px]">
         <SideControl />
-        <div className="w-full h-[512px]">
+        <div
+          className="h-[512px] w-full"
+          style={{ flex: "1", position: "relative" }}
+        >
           <Map />
         </div>
       </main>
