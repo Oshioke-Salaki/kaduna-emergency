@@ -9,7 +9,7 @@ import {
 } from "recharts";
 function MapModal() {
   return (
-    <div className="absolute left-0 top-[50px] z-[500] flex w-[264px] flex-col items-center rounded-[10px] border-[1px] border-solid border-[#c4c4c4] bg-white px-1 py-[9px]">
+    <div className="absolute left-0 top-[50px] z-[1000] flex w-[264px] flex-col items-center rounded-[10px] border-[1px] border-solid border-[#c4c4c4] bg-white px-1 py-[9px]">
       <h1 className="border-b-solid border-b-[0.5px] border-b-[#c4c4c4] pb-[9px] text-center text-base font-semibold text-black">
         Kaduna Metropolice
       </h1>
