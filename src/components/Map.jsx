@@ -1,10 +1,27 @@
 import { MapContainer, TileLayer } from "react-leaflet";
 import { riverLevels } from "../data/data";
+import { useGeolocation } from "../hooks/useGeolocation";
+import { useEffect, useState } from "react";
 
 function Map() {
+  const [mapPosition, setMapPosition] = useState([10.3764, 7.7095]);
+  const { getPosition, position: geoLocationPosition } = useGeolocation();
+
+  useEffect(function () {
+    getPosition();
+  });
+
+  useEffect(
+    function () {
+      if (geoLocationPosition)
+        setMapPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
+    },
+    [geoLocationPosition],
+  );
+
   return (
     <div className="h-auto" style={{ flex: "1", position: "relative" }}>
-      <div className="shadow-shadowPri absolute left-[50%] top-[14px] z-[1000] flex w-fit translate-x-[-50%]">
+      <div className="absolute left-[50%] top-[14px] z-[1000] flex w-fit translate-x-[-50%] shadow-shadowPri">
         {riverLevels.map((level, i) => (
           <div
             className="flex w-[140px] items-center justify-center px-6 py-1 text-center text-white"
@@ -16,7 +33,7 @@ function Map() {
         ))}
       </div>
       <MapContainer
-        center={[10.3764, 7.7095]}
+        center={mapPosition}
         zoom={6}
         scrollWheelZoom={false}
         height="100%"
