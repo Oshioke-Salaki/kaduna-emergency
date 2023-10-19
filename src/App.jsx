@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="h-fit w-[100vw] max-w-[100vw] overflow-x-hidden">
+    <div className="max-w-screen h-fit w-screen overflow-x-hidden">
       <Home />
     </div>
   );
