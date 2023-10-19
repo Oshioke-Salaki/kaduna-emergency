@@ -4,7 +4,7 @@ import {
   BarChart,
   // CartesianGrid,
   ResponsiveContainer,
-  Tooltip,
+  // Tooltip,
   // XAxis,
   // YAxis,
 } from "recharts";
@@ -119,7 +119,7 @@ function SideControl() {
               <Bar
                 // type="monotone"
                 dataKey="num"
-                // stroke='#15803d'
+                // stroke='#000201'
                 // fill='#dcfce7'
                 stroke="#f6f6f6"
                 fill="#624af5"
