@@ -1,4 +1,13 @@
 import WaterLevel from "./WaterLevel";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
+  // XAxis,
+  // YAxis,
+} from "recharts";
 
 function SideControl() {
   return (
@@ -43,9 +52,82 @@ function SideControl() {
         </div>
         <div className="mt-4 flex items-center gap-x-3">
           <h3 className="text-xs font-semibold text-black">Air Quality:</h3>
-          <div className="flex w-[180px] items-center justify-center rounded-sm bg-[#2ABE11] py-[3px] text-center text-xs font-semibold text-white">
+          <div className="flex w-full items-center justify-center rounded-sm bg-[#2ABE11] py-[3px] text-center text-xs font-semibold text-white">
             Good
           </div>
+        </div>
+        <div className="mt-4 flex items-center gap-x-3">
+          <h3 className="text-xs font-semibold text-black">P.M25:</h3>
+          <ResponsiveContainer width="100%" height={300}>
+            {/* <AreaChart data={data} width={700} height={300}> */}
+            <BarChart
+              data={[
+                {
+                  name: "d",
+                  num: 12,
+                },
+                {
+                  name: "d",
+                  num: 14,
+                },
+                {
+                  name: "d",
+                  num: 15,
+                },
+                {
+                  name: "d",
+                  num: 17,
+                },
+                {
+                  name: "d",
+                  num: 18,
+                },
+                {
+                  name: "d",
+                  num: 23,
+                },
+                {
+                  name: "d",
+                  num: 24,
+                },
+              ]}
+            >
+              {/* <XAxis
+            dataKey="label"
+            tick={{ fill: colors.text }}
+            tickLine={{ stroke: colors.text }}
+          />
+          <YAxis
+            unit="$"
+            tick={{ fill: colors.text }}
+            tickLine={{ stroke: colors.text }}
+          /> */}
+              <CartesianGrid strokeDasharray="4" />
+              <Tooltip contentStyle={{ backgroundColor: "white" }} />
+              {/* <Bar
+            type="monotone"
+            dataKey="totalSales"
+            // stroke='#4f46e5'
+            // fill='#c7d2fe'
+            stroke={colors.totalSales.stroke}
+            fill={colors.totalSales.fill}
+            strokeWidth={2}
+            unit="$"
+            name="Total sales"
+          /> */}
+              <Bar
+                // type="monotone"
+                dataKey="num"
+                // stroke='#15803d'
+                // fill='#dcfce7'
+                stroke="#624af5"
+                fill="#624af5"
+                // strokeWidth={2}
+                // unit="$"
+                name="Num"
+              />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
         <WaterLevel />
       </div>
