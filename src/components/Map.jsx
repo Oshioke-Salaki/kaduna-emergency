@@ -2,6 +2,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { airQualityLevel } from "../data/data";
 import { useGeolocation } from "../hooks/useGeolocation";
 import { useEffect, useState } from "react";
+import MapModal from "./MapModal";
 
 function Map() {
   const [mapPosition, setMapPosition] = useState([10.3764, 7.7095]);
@@ -26,7 +27,11 @@ function Map() {
   );
 
   return (
-    <div className="h-auto" style={{ flex: "1", position: "relative" }}>
+    <div
+      className="relative h-auto"
+      style={{ flex: "1", position: "relative" }}
+    >
+      <MapModal />
       <div className="absolute left-[50%] top-[14px] z-[1000] grid w-[80%] translate-x-[-50%] grid-cols-[auto_auto_auto_auto_auto] shadow-shadowPri">
         {airQualityLevel.map((level, i) => (
           <div
