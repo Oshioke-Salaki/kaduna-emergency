@@ -2,10 +2,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 
 function Map() {
   return (
-    <div
-      className="h-auto"
-      style={{ flex: "1", position: "relative", height: "100%" }}
-    >
+    <div className="h-auto" style={{ flex: "1", position: "relative" }}>
       <MapContainer
         center={[10.3764, 7.7095]}
         zoom={6}
