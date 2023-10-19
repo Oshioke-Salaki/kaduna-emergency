@@ -2,7 +2,7 @@ import WaterLevel from "./WaterLevel";
 
 function SideControl() {
   return (
-    <div className="bg-greyLigh rounded-[10px] pb-[14px]">
+    <div className="rounded-[10px] bg-greyLight pb-[14px]">
       <h2 className="rounded-[10px_10px_0_0] bg-primaryColor py-[23px] text-center text-white">
         Reports
       </h2>
