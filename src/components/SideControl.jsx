@@ -123,6 +123,7 @@ function SideControl() {
                 stroke="#f6f6f6"
                 fill="#624af5"
                 barSize={5}
+                barGap={1}
                 // strokeWidth={2}
                 // unit="$"
                 name="Num"
