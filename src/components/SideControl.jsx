@@ -2,9 +2,9 @@ import WaterLevel from "./WaterLevel";
 import {
   Bar,
   BarChart,
-  CartesianGrid,
+  // CartesianGrid,
   ResponsiveContainer,
-  Tooltip,
+  // Tooltip,
   // XAxis,
   // YAxis,
 } from "recharts";
@@ -102,8 +102,8 @@ function SideControl() {
             tick={{ fill: colors.text }}
             tickLine={{ stroke: colors.text }}
           /> */}
-              <CartesianGrid strokeDasharray="4" />
-              <Tooltip contentStyle={{ backgroundColor: "white" }} />
+              {/* <CartesianGrid strokeDasharray="4" />
+              <Tooltip contentStyle={{ backgroundColor: "white" }} /> */}
               {/* <Bar
             type="monotone"
             dataKey="totalSales"
