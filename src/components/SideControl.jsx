@@ -1,3 +1,5 @@
+import WaterLevel from "./WaterLevel";
+
 function SideControl() {
   return (
     <div className="bg-greyLigh rounded-[10px_10px_0_0]">
@@ -45,6 +47,7 @@ function SideControl() {
             Good
           </div>
         </div>
+        <WaterLevel />
       </div>
     </div>
   );
