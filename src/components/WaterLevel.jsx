@@ -1,3 +1,5 @@
+import RiverLevelBox from "./RiverLevelBox";
+
 function WaterLevel() {
   return (
     <div className="border-t-solid mt-5 border-t-[0.5px] border-t-[#c4c4c4] pt-5">
@@ -19,7 +21,7 @@ function WaterLevel() {
           <option value="lagos">Lagos</option>
         </select>
       </div>
-      <div className="flex items-center gap-x-[10px]">
+      <div className="mb-4 flex items-center gap-x-[10px]">
         <label
           htmlFor="river"
           className="w-10 text-xs font-semibold text-black"
@@ -36,6 +38,7 @@ function WaterLevel() {
           <option value="kaduna-north">Kaduna North</option>
         </select>
       </div>
+      <RiverLevelBox />
     </div>
   );
 }
