@@ -58,7 +58,7 @@ function SideControl() {
         </div>
         <div className="mt-4 flex items-end gap-x-3">
           <h3 className="text-xs font-semibold text-black">P.M25:</h3>
-          <ResponsiveContainer width={80} height={44}>
+          <ResponsiveContainer width="100%" height={44}>
             {/* <AreaChart data={data} width={700} height={300}> */}
             <BarChart
               barGap={1}
