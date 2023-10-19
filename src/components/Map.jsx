@@ -31,7 +31,9 @@ function Map() {
       className="relative h-auto"
       style={{ flex: "1", position: "relative" }}
     >
-      <MapModal />
+      <div className="absolute left-0 top-[50px] z-[1200]">
+        <MapModal />
+      </div>
       <div className="absolute left-[50%] top-[14px] z-[1000] grid w-[80%] translate-x-[-50%] grid-cols-[auto_auto_auto_auto_auto] shadow-shadowPri">
         {airQualityLevel.map((level, i) => (
           <div
