@@ -27,10 +27,10 @@ function Map() {
 
   return (
     <div className="h-auto" style={{ flex: "1", position: "relative" }}>
-      <div className="absolute left-[50%] top-[14px] z-[1000] flex w-[620px] translate-x-[-50%] shadow-shadowPri">
+      <div className="absolute left-[50%] top-[14px] z-[1000] grid translate-x-[-50%] grid-cols-[auto_auto_auto_auto_auto] shadow-shadowPri">
         {airQualityLevel.map((level, i) => (
           <div
-            className="flex min-w-[85px] max-w-[200px] items-center justify-center px-6 py-1 text-center text-[12px] text-white"
+            className="flex items-center justify-center px-6 py-1 text-center text-[12px] text-white"
             style={{ backgroundColor: level.color }}
             key={i}
           >
