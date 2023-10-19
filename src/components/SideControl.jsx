@@ -41,7 +41,7 @@ function SideControl() {
         </div>
         <div className="mt-4 flex items-center gap-x-3">
           <h3 className="text-xs font-semibold text-black">Air Quality:</h3>
-          <div className="flex items-center justify-center rounded-sm bg-[#2ABE11] py-[3px] text-center text-xs font-semibold text-white">
+          <div className="flex w-auto items-center justify-center rounded-sm bg-[#2ABE11] py-[3px] text-center text-xs font-semibold text-white">
             Good
           </div>
         </div>
