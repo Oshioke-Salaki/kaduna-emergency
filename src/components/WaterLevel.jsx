@@ -1,6 +1,6 @@
 function WaterLevel() {
   return (
-    <div className="border-t-solid border-t-[0.5px] border-t-[#c4c4c4] pt-5">
+    <div className="border-t-solid mt-5 border-t-[0.5px] border-t-[#c4c4c4] pt-5">
       <h2 className="mb-4 text-base font-semibold text-black">Water Level</h2>
       <div className="mb-4 flex items-center gap-x-[10px]">
         <label
