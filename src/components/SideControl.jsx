@@ -101,6 +101,18 @@ function SideControl() {
                 },
                 {
                   name: "d",
+                  num: 9,
+                },
+                {
+                  name: "d",
+                  num: 13,
+                },
+                {
+                  name: "d",
+                  num: 2,
+                },
+                {
+                  name: "d",
                   num: 18,
                 },
                 {
@@ -155,7 +167,7 @@ function SideControl() {
                 // fill='#dcfce7'
                 stroke="#f6f6f6"
                 fill="#624af5"
-                barSize={20}
+                barSize={15}
                 // barGap={1}
                 // strokeWidth={2}
                 // unit="$"
