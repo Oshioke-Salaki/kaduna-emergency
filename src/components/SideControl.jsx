@@ -120,8 +120,9 @@ function SideControl() {
                 dataKey="num"
                 // stroke='#15803d'
                 // fill='#dcfce7'
-                stroke="#624af5"
-                fill="#f6f6f6"
+                stroke="#f6f6f6"
+                fill="#624af5"
+                barSize={5}
                 // strokeWidth={2}
                 // unit="$"
                 name="Num"
