@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <main className="mb-6 flex h-fit gap-x-[53px] bg-white px-8 py-[70px]">
+      <main className="mb-6 flex h-fit w-full gap-x-[53px] bg-white px-8 py-[70px]">
         <SideControl />
 
         <Map />
