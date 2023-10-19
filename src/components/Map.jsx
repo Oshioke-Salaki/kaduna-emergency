@@ -30,7 +30,7 @@ function Map() {
       <div className="absolute left-[50%] top-[14px] z-[1000] flex w-fit translate-x-[-50%] shadow-shadowPri">
         {airQualityLevel.map((level, i) => (
           <div
-            className="flex w-fit items-center justify-center px-6 py-1 text-center text-[12px] text-white"
+            className="flex items-center justify-center px-6 py-1 text-center text-[12px] text-white"
             style={{ backgroundColor: level.color }}
             key={i}
           >
