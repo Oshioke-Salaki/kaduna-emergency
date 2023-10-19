@@ -91,6 +91,38 @@ function SideControl() {
                   name: "d",
                   num: 24,
                 },
+                {
+                  name: "d",
+                  num: 8,
+                },
+                {
+                  name: "d",
+                  num: 11,
+                },
+                {
+                  name: "d",
+                  num: 18,
+                },
+                {
+                  name: "d",
+                  num: 9,
+                },
+                {
+                  name: "d",
+                  num: 13,
+                },
+                {
+                  name: "d",
+                  num: 2,
+                },
+                {
+                  name: "d",
+                  num: 4,
+                },
+                {
+                  name: "d",
+                  num: 6,
+                },
               ]}
             >
               {/* <XAxis
