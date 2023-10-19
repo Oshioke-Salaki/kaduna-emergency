@@ -9,8 +9,10 @@ function Map() {
 
   useEffect(
     function () {
-      getPosition();
-      setMapPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
+      // getPosition();
+      // setMapPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
+      if (geoLocationPosition)
+        setMapPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
     },
     [getPosition, geoLocationPosition],
   );
