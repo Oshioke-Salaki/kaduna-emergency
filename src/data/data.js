@@ -11,12 +11,12 @@ export const riverLevels = [
   },
   {
     level: "Normal",
-    color: "#FFFE54",
+    color: "#ebeb0a",
     value: "4.78",
   },
   {
     level: "Warning",
-    color: "#BE6411",
+    color: "#e7750a",
     value: "8.53",
   },
   {
