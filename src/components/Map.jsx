@@ -10,7 +10,7 @@ function Map() {
   useEffect(
     function () {
       getPosition();
-      setMapPosition(geoLocationPosition);
+      setMapPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
     },
     [getPosition, geoLocationPosition],
   );
