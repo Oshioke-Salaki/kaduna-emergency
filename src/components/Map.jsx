@@ -7,9 +7,13 @@ function Map() {
   const [mapPosition, setMapPosition] = useState([10.3764, 7.7095]);
   const { getPosition, position: geoLocationPosition } = useGeolocation();
 
-  useEffect(function () {
-    getPosition();
-  });
+  useEffect(
+    function () {
+      getPosition();
+      setMapPosition(geoLocationPosition);
+    },
+    [getPosition, geoLocationPosition],
+  );
 
   useEffect(
     function () {
