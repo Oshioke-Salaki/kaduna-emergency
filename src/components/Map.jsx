@@ -4,7 +4,7 @@ import { riverLevels } from "../data/data";
 function Map() {
   return (
     <div className="h-auto" style={{ flex: "1", position: "relative" }}>
-      <div className="shadow-shadowPri absolute left-[50%] top-[14px] z-50 flex translate-x-[-50%]">
+      <div className="shadow-shadowPri absolute left-[50%] top-[14px] z-[1000] flex w-fit translate-x-[-50%]">
         {riverLevels.map((level, i) => (
           <div
             className="px-6 py-1 text-white"
