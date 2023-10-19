@@ -3,7 +3,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 function Map() {
   return (
     <div
-      className="h-full w-full"
+      className="h-auto"
       style={{ flex: "1", position: "relative", height: "100%" }}
     >
       <MapContainer
