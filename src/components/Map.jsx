@@ -7,7 +7,7 @@ function Map() {
       <div className="shadow-shadowPri absolute left-[50%] top-[14px] z-[1000] flex w-fit translate-x-[-50%]">
         {riverLevels.map((level, i) => (
           <div
-            className="px-6 py-1 text-white"
+            className="w-[140px] px-6 py-1 text-white"
             style={{ backgroundColor: level.color }}
             key={i}
           >
