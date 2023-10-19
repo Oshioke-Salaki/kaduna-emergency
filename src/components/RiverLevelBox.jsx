@@ -8,7 +8,7 @@ function RiverLevelBox() {
           {riverLevels.map((level, i) => (
             <div
               key={i}
-              className={`bg-${level.color} flex items-center justify-center px-[13px] py-[7px] text-center text-[8px] font-semibold text-white`}
+              className={`bg-[#${level.color}] flex items-center justify-center px-[13px] py-[7px] text-center text-[8px] font-semibold text-white`}
             >
               {level.level}
             </div>
