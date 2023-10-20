@@ -141,6 +141,9 @@ function MapModal() {
           </BarChart>
         </ResponsiveContainer>
       </div>
+      <h3 className="border-t-solid mt-[14px] border-t-[0.5px] border-t-[#c4c4c4] pt-1 text-xs font-medium text-black">
+        Click for more information
+      </h3>
     </div>
   );
 }
