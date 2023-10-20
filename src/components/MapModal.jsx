@@ -9,11 +9,11 @@ import {
 } from "recharts";
 function MapModal() {
   return (
-    <div className=" flex h-80 w-[264px] flex-col items-center rounded-[10px] border-[1px] border-solid border-[#c4c4c4] bg-white px-1 py-[9px]">
+    <div className=" flex w-[264px] flex-col items-center rounded-[10px] border-[1px] border-solid border-[#c4c4c4] bg-white px-1 py-[9px]">
       <h1 className="border-b-solid border-b-[0.5px] border-b-[#c4c4c4] pb-[9px] text-center text-base font-semibold text-black">
         Kaduna Metropolice
       </h1>
-      <div className="mb-1 w-[233px] rounded-sm bg-[#2ABE11] py-[10px] text-xs font-semibold text-white">
+      <div className="mb-1 flex w-[233px] items-center justify-center rounded-sm bg-[#2ABE11] py-[10px] text-center text-xs font-semibold text-white">
         Good
       </div>
       <p className="text-sm font-medium text-[#908484]">
@@ -23,7 +23,7 @@ function MapModal() {
       </p>
       <div className="mt-4 flex items-end gap-x-3">
         <h3 className="text-xs font-semibold text-black">P.M25</h3>
-        <ResponsiveContainer width="100%" height={44}>
+        <ResponsiveContainer width={100} height={44}>
           {/* <AreaChart data={data} width={700} height={300}> */}
           <BarChart
             barGap={1}
