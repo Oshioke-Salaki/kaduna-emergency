@@ -13,7 +13,7 @@ function MapModal() {
       <h1 className="border-b-solid border-b-[0.5px] border-b-[#c4c4c4] pb-[9px] text-center text-base font-semibold text-black">
         Kaduna Metropolice
       </h1>
-      <div className="mb-1 flex w-[233px] items-center justify-center rounded-sm bg-[#2ABE11] py-[10px] text-center text-xs font-semibold text-white">
+      <div className="mb-1 mt-[11px] flex w-[233px] items-center justify-center rounded-sm bg-[#2ABE11] py-[10px] text-center text-xs font-semibold text-white">
         Good
       </div>
       <p className="text-sm font-medium text-[#908484]">
