@@ -21,7 +21,7 @@ function MapModal() {
         <br />
         (Oct 18 2023 8am)
       </p>
-      <div className="mt-4 flex items-end gap-x-3">
+      <div className="mt-4 flex  items-end gap-x-3">
         <h3 className="text-xs font-semibold text-black">P.M25</h3>
         <ResponsiveContainer width={100} height={44}>
           {/* <AreaChart data={data} width={700} height={300}> */}
@@ -141,7 +141,7 @@ function MapModal() {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <h3 className="border-t-solid mt-[14px] w-full border-t-[0.5px] border-t-[#c4c4c4] pt-1 text-xs font-medium text-black">
+      <h3 className="border-t-solid mt-[14px] w-full border-t-[0.5px] border-t-[#c4c4c4] pt-1 text-center text-xs font-medium text-black">
         Click for more information
       </h3>
     </div>
