@@ -10,7 +10,7 @@ import {
 function MapModal() {
   return (
     <div className=" flex w-[264px] flex-col items-center rounded-[10px] border-[1px] border-solid border-[#c4c4c4] bg-white px-1 py-[9px]">
-      <h1 className="border-b-solid border-b-[0.5px] border-b-[#c4c4c4] pb-[9px] text-center text-base font-semibold text-black">
+      <h1 className="border-b-solid w-full border-b-[0.5px] border-b-[#c4c4c4] pb-[9px] text-center text-base font-semibold text-black">
         Kaduna Metropolice
       </h1>
       <div className="mb-1 mt-[11px] flex w-[233px] items-center justify-center rounded-sm bg-[#2ABE11] py-[10px] text-center text-xs font-semibold text-white">
@@ -141,7 +141,7 @@ function MapModal() {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <h3 className="border-t-solid mt-[14px] border-t-[0.5px] border-t-[#c4c4c4] pt-1 text-xs font-medium text-black">
+      <h3 className="border-t-solid mt-[14px] w-full border-t-[0.5px] border-t-[#c4c4c4] pt-1 text-xs font-medium text-black">
         Click for more information
       </h3>
     </div>
