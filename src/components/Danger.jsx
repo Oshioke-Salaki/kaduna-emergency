@@ -9,7 +9,8 @@ function Danger() {
       <img src={bulb} alt="" className="mr-[18px]" />
       <p className="text-base font-bold text-white">
         Flood Alert!!! The water level at Kaduna; Area- Kigo road, Badiko,
-        Narayi, Occupants of buildings in these Areas should evacuate. *225*56*5
+        Narayi, Occupants of buildings in these Areas should evacuate.
+        *384*7963#
       </p>
     </div>
   );
