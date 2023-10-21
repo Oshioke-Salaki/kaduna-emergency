@@ -6,7 +6,7 @@ import useFetch from "../hooks/useFetch";
 
 function Home() {
   const {data} = useFetch(`https://api.thingspeak.com/channels/2313632/feeds.json?api_key=0PMLQ7B0B9BOGV52`)
-  data && console.log(data.feeds)
+  data && console.log(data)
   return (
     <>
      <Navbar />

@@ -32,7 +32,7 @@ exports.accessUssd = async (req, res) => {
 
 
     if(text == ''){
-        response = 'The weather quality in kaduna today is 12.3'
+        response = 'END The weather quality in kaduna today is 12.3'
     }
 
     if(text !== ''){
