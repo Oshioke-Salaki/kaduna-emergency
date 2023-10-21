@@ -25,7 +25,7 @@ const sendSms = async (phone, content) => {
 }
 
 // ussd
-const accessUssd = async (req, res) => {
+exports.accessUssd = async (req, res) => {
     const {sesionId, serviceCode, phoneNumber, text} = req.body
 
     let response;
@@ -61,7 +61,4 @@ const accessUssd = async (req, res) => {
 }
 
 
-module.exports = {
-    sendSms,
-    accessUssd
-}
+module.exports = exports
