@@ -6,6 +6,10 @@ const africastalking = Africastalking({
     username: 'sandbox',
 })
 
+const getSensorData = async () => {
+
+}
+
 //   send sms using africastalking
 const sendSms = async (phone, content) => {
 
