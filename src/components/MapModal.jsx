@@ -50,7 +50,7 @@ function MapModal() {
       </p>
       <div className="mt-4 flex w-full  items-end gap-x-3  justify-self-start pl-[11px]">
         <h3 className="pb-[5px] text-xs font-semibold text-black">P.M25</h3>
-        <ResponsiveContainer width={100} height={44}>
+        <ResponsiveContainer width="100%" height={44}>
           {/* <AreaChart data={data} width={700} height={300}> */}
           <BarChart barGap={1} data={dataFeeds}>
             {/* <XAxis
