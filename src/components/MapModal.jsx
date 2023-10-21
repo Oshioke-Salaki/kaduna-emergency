@@ -46,7 +46,7 @@ function MapModal() {
         <br />
         (Oct 18 2023 8am)
         <br />
-        {JSON.parse(dataFeeds?.[dataFeeds.length - 1].field1)}
+        {/* { JSON.parse(data.feeds?.[data.feeds.length -1].field1 )} */}
       </p>
       <div className="mt-4 flex w-full  items-end gap-x-3  justify-self-start pl-[11px]">
         <h3 className="pb-[5px] text-xs font-semibold text-black">P.M25</h3>
