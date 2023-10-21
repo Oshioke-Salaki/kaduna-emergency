@@ -76,7 +76,7 @@ function MapModal() {
           /> */}
             <Bar
               // type="monotone"
-              dataKey="num"
+              dataKey="field1"
               // stroke='#000201'
               // fill='#dcfce7'
               stroke="#f6f6f6"
@@ -85,7 +85,7 @@ function MapModal() {
               // barGap={1}
               // strokeWidth={2}
               // unit="$"
-              name="Num"
+              name="field1"
             />
           </BarChart>
         </ResponsiveContainer>
