@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express'),
     cors = require('cors'),
     ATServices = require('./services/africasTalking')
-    // RadysisServices = require('./services/radysis')
+    RadysisServices = require('./services/radysis')
 
 const app = express()
 
