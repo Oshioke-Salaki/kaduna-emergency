@@ -30,9 +30,9 @@ async function fetchData() {
     try {
       const response = await axios.get(`https://api.thingspeak.com/channels/2313632/feeds.json?api_key=0PMLQ7B0B9BOGV52`);
       console.log(response.data.feeds[response.data.feeds.length -1]);
-      if(response.data.feeds[response.data.feeds.length -1].field1 > 1069){
+      if(response.data.feeds[response.data.feeds.length -1].field1 > 1800){
         // Making a call alert with radysis
-        // RadysisServices.makeCall("+2349079390551")
+        // RadysisServices.makeCall("+2349024214400")
       }
 
     } catch (error) {
@@ -42,7 +42,7 @@ async function fetchData() {
 
 // setInterval(()=>{
 //     fetchData()
-// }, 10000)
+// }, 5000)
 
 
 // listening on port

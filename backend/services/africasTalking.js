@@ -7,6 +7,10 @@ const africastalking = Africastalking({
     username: 'sandbox',
 })
 
+const getSensorData = async () => {
+
+}
+
 //   send sms using africastalking
 const sendSms = async (phone, content) => {
 
@@ -29,12 +33,13 @@ const sendSms = async (phone, content) => {
 exports.accessUssd = async (req, res) => {
     const {sesionId, serviceCode, phoneNumber, text} = req.body
 
-    const respons = await axios.get(`https://api.thingspeak.com/channels/2313632/feeds.json?api_key=0PMLQ7B0B9BOGV52`);
+    const data = await axios.get(`https://api.thingspeak.com/channels/2313632/feeds.json?api_key=0PMLQ7B0B9BOGV52`);
+    const value = await JSON.parse(data.data.feeds[data.data.feeds.length -1].field1)
 
     let response;
 
     if(text == ''){
-        response = 'The Air quality in kaduna today is 12.3'
+        response = `END The weather quality in kaduna today is ${value}`
     }
 
     if(text !== ''){

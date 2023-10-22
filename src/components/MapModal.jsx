@@ -44,8 +44,8 @@ function MapModal() {
         Kaduna Metropolice
       </h1>
       {
-        dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 1070 && <Indicator color={'bg-green-500'} text={'Good'}/> ||
-        dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 170 && <Indicator color={'bg-red-200'} text={'Moderate'}/> ||
+        dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 < 1800 && <Indicator color={'bg-green-500'} text={'Good'}/> ||
+        dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 > 1800 && <Indicator color={'bg-red-500'} text={'Unhealthy'}/> ||
         dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 1070 && <Indicator color={'bg-red-400'} text={'Unhealthy'}/> ||
         dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 1070 && <Indicator color={'bg-red-700'} text={'Harzardous'}/>
       }
