@@ -1,3 +1,6 @@
+// import { useEffect } from "react";
+import { useEffect, useState } from "react";
+// import useFetch from "../hooks/useFetch";
 import WaterLevel from "./WaterLevel";
 import {
   Bar,
@@ -8,8 +11,35 @@ import {
   // XAxis,
   // YAxis,
 } from "recharts";
+import Indicator from "./Indicator";
 
 function SideControl() {
+  const [dataFeeds, setDataFeeds] = useState([]);
+  useEffect(() => {
+    async function fetchFeeds() {
+      const res = await fetch(
+        `https://api.thingspeak.com/channels/2313632/feeds.json?api_key=0PMLQ7B0B9BOGV52`,
+      );
+      const data = await res.json();
+      // return data;
+      // console.log(res);
+
+      setDataFeeds(data.feeds.filter((x) => x.field1 !== 0));
+    }
+
+    const id = setInterval(() => {
+      fetchFeeds();
+      // console.log("h");
+    }, 1000);
+
+    return () => {
+      clearInterval(id);
+    };
+
+    // fetchFeeds();
+  }, []);
+
+  // console.log(dataFeeds);
   return (
     <div className="rounded-[10px] bg-greyLight pb-[14px]">
       <h2 className="rounded-[10px_10px_0_0] bg-primaryColor py-[23px] text-center text-white">
@@ -52,91 +82,18 @@ function SideControl() {
         </div>
         <div className="mt-4 flex items-center gap-x-3">
           <h3 className="text-xs font-semibold text-black">Air Quality:</h3>
-          <div className="flex w-full items-center justify-center rounded-sm bg-[#2ABE11] py-[3px] text-center text-xs font-semibold text-white">
-            Good
-          </div>
+          {
+            dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 1070 && <Indicator color={'bg-green-500'} text={'Good'}/> ||
+            dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 > 170 && <Indicator color={'bg-red-200'} text={'Moderate'}/> ||
+            dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 >= 1070 && <Indicator color={'bg-red-400'} text={'Unhealthy'}/> ||
+            dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 < 1070 && <Indicator color={'bg-red-700'} text={'Harzardous'}/>
+          }
         </div>
         <div className="mt-4 flex items-end gap-x-3">
-          <h3 className="text-xs font-semibold text-black">P.M25:</h3>
-          <ResponsiveContainer width="100%" height={44}>
+          <h3 className="text-xs font-semibold text-black">P.M:</h3>
+          <ResponsiveContainer  height={44}>
             {/* <AreaChart data={data} width={700} height={300}> */}
-            <BarChart
-              barGap={1}
-              data={[
-                {
-                  name: "d",
-                  num: 12,
-                },
-                {
-                  name: "d",
-                  num: 14,
-                },
-                {
-                  name: "d",
-                  num: 15,
-                },
-                {
-                  name: "d",
-                  num: 17,
-                },
-                {
-                  name: "d",
-                  num: 18,
-                },
-                {
-                  name: "d",
-                  num: 23,
-                },
-                {
-                  name: "d",
-                  num: 24,
-                },
-                {
-                  name: "d",
-                  num: 8,
-                },
-                {
-                  name: "d",
-                  num: 11,
-                },
-                {
-                  name: "d",
-                  num: 9,
-                },
-                {
-                  name: "d",
-                  num: 13,
-                },
-                {
-                  name: "d",
-                  num: 2,
-                },
-                {
-                  name: "d",
-                  num: 18,
-                },
-                {
-                  name: "d",
-                  num: 9,
-                },
-                {
-                  name: "d",
-                  num: 13,
-                },
-                {
-                  name: "d",
-                  num: 2,
-                },
-                {
-                  name: "d",
-                  num: 4,
-                },
-                {
-                  name: "d",
-                  num: 6,
-                },
-              ]}
-            >
+            <BarChart barGap={1} data={dataFeeds}>
               {/* <XAxis
             dataKey="label"
             tick={{ fill: colors.text }}
@@ -162,7 +119,7 @@ function SideControl() {
           /> */}
               <Bar
                 // type="monotone"
-                dataKey="num"
+                dataKey="field1"
                 // stroke='#000201'
                 // fill='#dcfce7'
                 stroke="#f6f6f6"
@@ -171,7 +128,7 @@ function SideControl() {
                 // barGap={1}
                 // strokeWidth={2}
                 // unit="$"
-                name="Num"
+                name="field1"
               />
             </BarChart>
           </ResponsiveContainer>

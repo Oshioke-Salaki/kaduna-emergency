@@ -1,5 +1,6 @@
 require('dotenv').config()
-const Africastalking = require('africastalking')
+const Africastalking = require('africastalking'),
+    axios = require('axios')
 
 const africastalking = Africastalking({
     apiKey: process.env.API_KEY,
@@ -32,11 +33,13 @@ const sendSms = async (phone, content) => {
 exports.accessUssd = async (req, res) => {
     const {sesionId, serviceCode, phoneNumber, text} = req.body
 
+    const data = await axios.get(`https://api.thingspeak.com/channels/2313632/feeds.json?api_key=0PMLQ7B0B9BOGV52`);
+    const value = await JSON.parse(data.data.feeds[data.data.feeds.length -1].field1)
+
     let response;
 
-
     if(text == ''){
-        response = 'END The weather quality in kaduna today is 12.3'
+        response = `END The weather quality in kaduna today is ${value}`
     }
 
     if(text !== ''){

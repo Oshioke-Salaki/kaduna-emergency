@@ -1,36 +1,38 @@
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 
-const useFetch = (url) => {
+async function useFetch(url) {
+  // const [data, setData] = useState(null)
+  // const [isPending, setIsPending] = useState(null)
+  // const [error, setError] = useState(null)
 
-    const [data, setData] = useState(null)
-    const [isPending, setIsPending] = useState(null)
-    const [error, setError] = useState(null)
+  // useEffect(()=>{
 
-    useEffect(()=>{
+  //     fetch(url, {
+  //         headers:{
 
-        fetch(url, {
-            headers:{
+  //         }
+  //     }).then((res)=>{
+  //         if(!res.ok){
+  //             throw Error(`no valid response from this resource`)
+  //         }
+  //         return res.json()
 
-            }
-        }).then((res)=>{
-            if(!res.ok){
-                throw Error(`no valid response from this resource`)
-            }
-            return res.json()
+  //     }).then((data)=>{
 
-        }).then((data)=>{
+  //         setData(data)
+  //         setError(null)
+  //         setIsPending(null)
 
-            setData(data)
-            setError(null)
-            setIsPending(null)
+  //     }).catch((error)=>{
+  //         setError(error.message)
+  //     })
 
-        }).catch((error)=>{
-            setError(error.message)
-        })
-     
-    }, [url])
-    
-    return {data, isPending, error}
+  // }, [url])
+
+  // return {data, isPending, error}
+  const res = await fetch(url);
+  const data = await res.json();
+  return data;
 }
 
 export default useFetch;

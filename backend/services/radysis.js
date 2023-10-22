@@ -19,7 +19,7 @@ const makeCall = (phone)=>{
     
     
         // "ApplicationID": "VDT-f5e6c694-a59a-409d-b0c9-2e6984852a76"
-        "Eml":"<Response><Say>Dear Manoah, your are on a daily drug treatment, expected to take two tablets of panadol morning, afternoon and evening. remember to come fr your physio terapy on 12/12/2023!</Say></Response>"
+        "Eml":"<Response><Say>Hello Dear respondent, this is an alert call, the air quality within your province is poor we advice to put on safety materials like nosemask before going out, to prevent harzadous air in your system </Say></Response>"
     
     
         }).then(function(response){
