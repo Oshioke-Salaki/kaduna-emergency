@@ -11,6 +11,7 @@ import {
   // XAxis,
   // YAxis,
 } from "recharts";
+import Indicator from "./Indicator";
 
 function SideControl() {
   const [dataFeeds, setDataFeeds] = useState([]);
@@ -81,13 +82,16 @@ function SideControl() {
         </div>
         <div className="mt-4 flex items-center gap-x-3">
           <h3 className="text-xs font-semibold text-black">Air Quality:</h3>
-          <div className="flex w-full items-center justify-center rounded-sm bg-[#2ABE11] py-[3px] text-center text-xs font-semibold text-white">
-            Good
-          </div>
+          {
+            dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 1070 && <Indicator color={'bg-green-500'} text={'Good'}/> ||
+            dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 > 170 && <Indicator color={'bg-red-200'} text={'Moderate'}/> ||
+            dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 >= 1070 && <Indicator color={'bg-red-400'} text={'Unhealthy'}/> ||
+            dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 < 1070 && <Indicator color={'bg-red-700'} text={'Harzardous'}/>
+          }
         </div>
         <div className="mt-4 flex items-end gap-x-3">
-          <h3 className="text-xs font-semibold text-black">P.M25:</h3>
-          <ResponsiveContainer width="100%" height={44}>
+          <h3 className="text-xs font-semibold text-black">P.M:</h3>
+          <ResponsiveContainer  height={44}>
             {/* <AreaChart data={data} width={700} height={300}> */}
             <BarChart barGap={1} data={dataFeeds}>
               {/* <XAxis

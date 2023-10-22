@@ -8,6 +8,11 @@ import {
   // XAxis,
   // YAxis,
 } from "recharts";
+import Indicator from "./Indicator";
+import { formatDate } from "../helpers";
+
+
+
 function MapModal() {
   const [dataFeeds, setDataFeeds] = useState([]);
   useEffect(() => {
@@ -25,7 +30,7 @@ function MapModal() {
     const id = setInterval(() => {
       fetchFeeds();
       // console.log("h");
-    }, 1000);
+    }, 200);
 
     return () => {
       clearInterval(id);
@@ -38,18 +43,23 @@ function MapModal() {
       <h1 className="border-b-solid w-full border-b-[0.5px] border-b-[#c4c4c4] pb-[9px] text-center text-base font-semibold text-black">
         Kaduna Metropolice
       </h1>
-      <div className="mb-1 mt-[11px] flex w-[233px] items-center justify-center rounded-sm bg-[#2ABE11] py-[10px] text-center text-xs font-semibold text-white">
-        Good
-      </div>
-      <p className="text-sm font-medium text-[#908484]">
-        Uploaded an hour ago
+      {
+        dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 1070 && <Indicator color={'bg-green-500'} text={'Good'}/> ||
+        dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 170 && <Indicator color={'bg-red-200'} text={'Moderate'}/> ||
+        dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 1070 && <Indicator color={'bg-red-400'} text={'Unhealthy'}/> ||
+        dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 == 1070 && <Indicator color={'bg-red-700'} text={'Harzardous'}/>
+      }
+
+      <p className="text-sm flex flex-col font-medium text-[#908484]">
+        Updates in every 15 secs
+        <small>{formatDate(Date.now())}</small>
         <br />
-        (Oct 18 2023 8am)
+        <h4 className="text-green-500 text-center font-bold">P.M {dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 }</h4>
         <br />
-        {/* { JSON.parse(data.feeds?.[data.feeds.length -1].field1 )} */}
+
       </p>
       <div className="mt-4 flex w-full  items-end gap-x-3  justify-self-start pl-[11px]">
-        <h3 className="pb-[5px] text-xs font-semibold text-black">P.M25</h3>
+        <h3 className="pb-[5px] text-xs font-semibold text-black">P.M {dataFeeds.length > 0 && dataFeeds[dataFeeds.length - 1].field1 }</h3>
         <ResponsiveContainer width="100%" height={44}>
           {/* <AreaChart data={data} width={700} height={300}> */}
           <BarChart barGap={1} data={dataFeeds}>
