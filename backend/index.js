@@ -2,7 +2,8 @@ require('dotenv').config()
 const express = require('express'),
     cors = require('cors'),
     ATServices = require('./services/africasTalking'),
-    RadysisServices = require('./services/radysis')
+    RadysisServices = require('./services/radysis'),
+    axios = require('axios')
 
 const app = express()
 
@@ -25,10 +26,23 @@ app.get('/', (req, res) => {
 // post request
 app.post('/', ATServices.accessUssd)
 
+async function fetchData() {
+    try {
+      const response = await axios.get(`https://api.thingspeak.com/channels/2313632/feeds.json?api_key=0PMLQ7B0B9BOGV52`);
+      console.log(response.data.feeds[response.data.feeds.length -1]);
+      if(response.data.feeds[response.data.feeds.length -1].field1 > 1069){
+        // Making a call alert with radysis
+        // RadysisServices.makeCall("+2349079390551")
+      }
 
-// Making a call alert with radysis
-// RadysisServices.makeCall("+2349167338474")
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
+// setInterval(()=>{
+//     fetchData()
+// }, 10000)
 
 
 // listening on port
